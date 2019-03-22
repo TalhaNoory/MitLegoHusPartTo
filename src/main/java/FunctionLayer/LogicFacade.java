@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package FunctionLayer;
 
 import DBAccessor.UserMapper;
@@ -13,12 +8,14 @@ import DBAccessor.UserMapper;
  */
 public class LogicFacade {
     
-    public static User login( String email, String password ) throws LoginSampleException {
-        return UserMapper.login( email, password );
+    //Har tilføjet userName i parameteren!
+    public static User login( String userName, String email, String password ) throws LoginSampleException {
+        return UserMapper.login( userName, email, password );
     } 
 
-    public static User createUser( String email, String password ) throws LoginSampleException {
-        User user = new User(email, password, "customer");
+    // Har tilføjet en userName i parameteren!
+    public static User createUser( String userName, String email, String password ) throws LoginSampleException {
+        User user = new User(userName, email, password/*, "customer"*/);
         UserMapper.createUser( user );
         return user;
     }

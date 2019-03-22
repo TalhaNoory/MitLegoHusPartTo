@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package PresentationLayer;
 
 import FunctionLayer.LogicFacade;
@@ -19,13 +14,15 @@ import javax.servlet.http.HttpSession;
 public class Login extends Command{
 
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException {
+        String userName = request.getParameter("userName"); // Tilføjet en userName her;
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        User user = LogicFacade.login(email, password);
+        User user = LogicFacade.login(userName, email, password);
         HttpSession session = request.getSession();
         session.setAttribute("user", user);
-        session.setAttribute("role", user.getRole());
-        return user.getRole() + "page";
+//        session.setAttribute("role", user.getRole());
+//        return user.getRole() + "page";
+        return "page";
     }
 
 }
