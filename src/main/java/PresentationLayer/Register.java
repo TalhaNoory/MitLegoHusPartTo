@@ -29,7 +29,7 @@ public class Register extends Command{
             session.setAttribute( "user", user );
 //            session.setAttribute( "role", user.getRole() );
 //            return user.getRole() + "page";
-            return "page";
+            return "customerpage";
         } else {
             throw new LoginSampleException( "the two passwords did not match" );
         }

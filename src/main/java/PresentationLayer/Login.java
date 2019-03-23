@@ -22,7 +22,7 @@ public class Login extends Command{
         session.setAttribute("user", user);
 //        session.setAttribute("role", user.getRole());
 //        return user.getRole() + "page";
-        return "page";
+        return "customerpage";
     }
 
 }
