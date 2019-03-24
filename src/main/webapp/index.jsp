@@ -13,12 +13,15 @@
     </head>
     <body>
         <h1>Welcome to Sem 2</h1>
-        
+
         <table>
             <tr><td>Login</td>
                 <td>
                     <form name="login" action="FrontController" method="POST">
                         <input type="hidden" name="command" value="login">
+                        Username:<br>
+                        <input type="text" name="UserName" value="SomeOne"
+                               <br>
                         Email:<br>
                         <input type="text" name="email" value="someone@nowhere.com">
                         <br>
@@ -32,6 +35,9 @@
                 <td>
                     <form name="register" action="FrontController" method="POST">
                         <input type="hidden" name="command" value="register">
+                        Username:<br>
+                        <input type="text" name="UserName" value="SomeOne"
+                               <br>
                         Email:<br>
                         <input type="text" name="email" value="someone@nowhere.com">
                         <br>
@@ -46,11 +52,11 @@
                 </td>
             </tr>
         </table>
-        <% String error = (String) request.getAttribute( "error");
-           if ( error != null) { 
-               out.println("<H2>Error!!</h2>");
-               out.println(error);
-           }
+        <% String error = (String) request.getAttribute("error");
+            if (error != null) {
+                out.println("<H2>Error!!</h2>");
+                out.println(error);
+            }
         %>
     </body>
 </html>
