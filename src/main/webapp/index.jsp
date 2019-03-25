@@ -21,7 +21,7 @@
                         <input type="hidden" name="command" value="login">
                         Username:<br>
                         <input type="text" name="UserName" value="SomeOne"
-                               <br>
+                        <br>
                         Email:<br>
                         <input type="text" name="email" value="someone@nowhere.com">
                         <br>
@@ -37,7 +37,7 @@
                         <input type="hidden" name="command" value="register">
                         Username:<br>
                         <input type="text" name="UserName" value="SomeOne"
-                               <br>
+                        <br>
                         Email:<br>
                         <input type="text" name="email" value="someone@nowhere.com">
                         <br>
